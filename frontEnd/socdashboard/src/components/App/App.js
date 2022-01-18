@@ -7,13 +7,14 @@ import Header from "../Header";
 import Library from "../Library";
 
 function App() {
-  return (
-    <div className="App">
-      <Logo />
-      <NavBar />
-      <LoginBox />
-    </div>
-  );
+      return (
+            <div className="App">
+                  <Logo />
+                  <NavBar />
+                  <LoginBox />
+                  <Library />
+            </div>
+      );
 }
 
 export default App;
