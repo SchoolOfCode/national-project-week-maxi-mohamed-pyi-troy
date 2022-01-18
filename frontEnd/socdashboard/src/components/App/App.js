@@ -1,9 +1,10 @@
 import "./App.css";
+import LoginBox from "../LoginBox";
 
 function App() {
   return (
     <div className="App">
-      <h1>hello pyi</h1>
+      <LoginBox />
     </div>
   );
 }
