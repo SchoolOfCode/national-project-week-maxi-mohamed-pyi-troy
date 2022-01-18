@@ -1,3 +1,21 @@
-li{
+li {
   list-style: none;
+  position: relative;
+}
+
+li img {
+  width: 5em;
+  height: 4em;
+}
+
+.listContainer {
+  background-color: aqua;
+  width: 10em;
+  height: 100vh;
+  padding: 0em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
 }

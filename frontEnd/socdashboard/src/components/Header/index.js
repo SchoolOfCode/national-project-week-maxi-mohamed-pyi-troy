@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 
 const Header = ({ user }) => {
   return (
@@ -7,10 +8,8 @@ const Header = ({ user }) => {
         src="https://media-public.canva.com/xni2M/MADd2Bxni2M/2/t.png"
         alt="bell"
       ></img>
-      <img
-        src="https://media-public.canva.com/Jz7zs/MACSFhJz7zs/2/t.png"
-        alt="avatar"
-      ></img>
+      <h2 className="avatar">T</h2>
+
       <h2>Welcome {user}</h2>
     </div>
   );
