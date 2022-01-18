@@ -5,7 +5,7 @@ export default function LoginBox() {
       <h2>Please login with your email and bootcamper I.D</h2>
       <form className="inputForm">
         <input type="email" className="emailInput"></input>
-        <input type="text" clasName="idInput"></input>
+        <input type="text" className="idInput"></input>
         <button className="loginSubmitButton">Login Now</button>
       </form>
     </div>

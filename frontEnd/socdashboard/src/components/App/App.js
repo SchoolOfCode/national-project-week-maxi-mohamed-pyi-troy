@@ -3,6 +3,7 @@ import LoginBox from "../LoginBox";
 import Logo from "../Logo";
 import NavBar from "../NavBar";
 import Header from "../Header";
+import Library from "../Library";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Header user="bootcamper" />
       <LoginBox />
       <NavBar />
+      <Library />
     </div>
   );
 }
