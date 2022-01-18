@@ -14,7 +14,7 @@ function App() {
         className="socLogo"
       />
       <Logo />
-      <Header user="bootcamper" />
+      <Header user="admin" />
       <LoginBox />
       <NavBar />
       <Library />
