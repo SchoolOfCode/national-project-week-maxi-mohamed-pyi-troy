@@ -1,0 +1,10 @@
+.inputContainer {
+  margin: 10em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #faa;
+  width: 20em;
+  
+}

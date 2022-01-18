@@ -1,0 +1,18 @@
+.headerContainer {
+  display: flex;
+  background-color: red;
+  margin-right: 1em;
+}
+
+img {
+  width: 2em;
+  height: 2em;
+  object-fit: contain;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 1px solid;
+  width: 2rem;
+  text-align: center;
+}

@@ -1,9 +1,17 @@
+// import {Routes, Route, Link} from "react-router-dom";
 import "./App.css";
+import LoginBox from "../LoginBox";
+import Logo from "../Logo";
+import NavBar from "../NavBar";
+import Header from "../Header";
+import Library from "../Library";
 
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
+      <Logo />
+      <NavBar />
+      <LoginBox />
     </div>
   );
 }
