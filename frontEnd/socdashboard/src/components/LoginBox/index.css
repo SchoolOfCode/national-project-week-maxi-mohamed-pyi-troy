@@ -1,4 +1,10 @@
 .inputContainer {
-  background-color: violet;
-  width: 10em;
+  margin: 10em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #faa;
+  width: 20em;
+  
 }
