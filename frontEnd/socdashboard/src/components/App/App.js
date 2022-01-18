@@ -3,15 +3,15 @@ import "./App.css";
 import LoginBox from "../LoginBox";
 import Logo from "../Logo";
 import NavBar from "../NavBar";
-import Header from "../Header";
-import Library from "../Library";
+// import {useState} from "react";
 
 function App() {
   return (
     <div className="App">
       <Logo />
-      <NavBar />
+
       <LoginBox />
+      <NavBar />
     </div>
   );
 }
