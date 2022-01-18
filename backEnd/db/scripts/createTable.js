@@ -2,4 +2,4 @@ import query from "../index.js";
 
 const sqlString = `CREATE TABLE IF NOT EXISTS library (id SERIAL PRIMARY KEY, week INTEGER, day INTEGER, topic )`;
 
-// Maxi is the best
+// Maxi is the best and you too
