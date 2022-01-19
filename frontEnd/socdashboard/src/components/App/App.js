@@ -9,6 +9,7 @@ import Library from "../Library";
 function App() {
   const [formData, setFormData] = useState({ email: "", bootcamperId: "" });
   const [loggedIn, setLoggedIn] = useState(false);
+  const [userID, setUserID] = useState("");
 
   function handleChange(event) {
     setFormData((prevFormData) => {
@@ -27,16 +28,18 @@ function App() {
       console.log(formData.bootcamperId);
       console.log(loggedIn);
       setLoggedIn(!loggedIn);
+      setUserID("bootcamper");
     } else if (formData.bootcamperId === "admin") {
       console.log(formData.bootcamperId);
       console.log(loggedIn);
       setLoggedIn(!loggedIn);
+      setUserID("admin");
     }
   }
 
   return (
     <div className="App">
-      <Logo />
+      <Logo user={userID} />
       <LoginBox handleChange={handleChange} handleSubmit={handleSubmit} />
 
       {loggedIn && <NavBar />}
