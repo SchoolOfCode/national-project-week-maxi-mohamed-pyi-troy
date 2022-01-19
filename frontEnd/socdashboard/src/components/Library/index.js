@@ -4,7 +4,7 @@ import NewResourceForm from "../NewResourceForm";
 
 import React, { useState, useEffect } from "react";
 
-const Library = () => {
+const Library = ({ user }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -21,8 +21,8 @@ const Library = () => {
   return (
     <div className="LibraryContainer">
       <SearchBar />
-      <button>Add to library</button>
-      <NewResourceForm />
+      
+      {user === "Admin" && <NewResourceForm />}
       {posts.map((item) => {
         return (
           <LibraryResult
