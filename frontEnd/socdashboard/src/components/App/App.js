@@ -41,6 +41,7 @@ function App() {
       {loggedIn && <NavBar />}
     </div>
   );
+
 }
 
 export default App;
