@@ -70,7 +70,10 @@ function App() {
           <LoginBox handleChange={handleChange} handleSubmit={handleSubmit} />
         }
       />
-      <Route path="/main" element={<Main />} />
+      <Route
+        path="/main"
+        element={<Main userID={userID} formData={formData} />}
+      />
     </Routes>
   );
 }

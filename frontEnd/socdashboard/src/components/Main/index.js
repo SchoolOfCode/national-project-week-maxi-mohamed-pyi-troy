@@ -1,22 +1,19 @@
-import React from "react";
+import Logo from "../Logo";
+import NavBar from "../NavBar";
+import { useState } from "react";
+import Library from "../Library";
+import Header from "../Header";
+import "./main.css";
 
-function Main() {
-
+const Main = ({ userID, formData }) => {
   return (
-     (userID === "admin") ? {
-        return ([
-          <Logo user={userID} email={formData.email} />,
-          <NavBar />,
-          <Library user={userID} />,
-        ])
-      } : (userID === "bootcamper") ? {
-        return ([
-          <Logo user={userID} email={formData.email} />,
-          <NavBar />,
-          <Library user={userID} />,
-        ])
-      } : null
+    <div className="main-div">
+      <Logo user={userID} email={formData.email} />
+      <div className="main-content">
+        <NavBar />
+        <Library user={userID} className="libraryComponent" />
+      </div>
+    </div>
   );
-}
-
+};
 export default Main;
