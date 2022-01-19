@@ -16,3 +16,9 @@ img {
   width: 2rem;
   text-align: center;
 }
+
+span{
+  font-size: smaller;
+  font-weight: 400;
+  
+}
