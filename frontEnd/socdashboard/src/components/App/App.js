@@ -37,10 +37,10 @@ function App() {
   return (
     <div className="App">
       <Logo />
-      <LoginBox handleChange={handleChange} handleSubmit={handleSubmit} />
-
-      {loggedIn && <NavBar />}
-      <Library />
+      <div className="main-library">
+        <NavBar />
+        <Library />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,22 @@
+a {
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+.libraryResultContainer {
+  margin: 1em;
+  border: solid 1px;
+}
+
+.week-day {
+  display: flex;
+  margin-left: 1em;
+}
+
+.day-text {
+  margin-left: 1em;
+}
