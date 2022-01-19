@@ -12,6 +12,7 @@ import NavBar from "../NavBar";
 import { useState } from "react";
 import Library from "../Library";
 import Header from "../Header";
+import Main from "../Main";
 
 function App() {
   const [formData, setFormData] = useState({ email: "", bootcamperId: "" });
@@ -47,16 +48,18 @@ function App() {
     }
   }
 
-  function renderComponent() {
-    if (userID === "admin") {
-      return [
-        <Logo user={userID} email={formData.email} />,
-        <NavBar />,
-        <Library user={userID}/>,
-      ];
-    } else if (userID === "bootcamper") {
-      return [<Logo user={userID} email={formData.email} />, <NavBar />, <Library user={userID}/>];
-    }
+  if (userID === "admin") {
+    return [
+      <Logo user={userID} email={formData.email} />,
+      <NavBar />,
+      <Library user={userID} />,
+    ];
+  } else if (userID === "bootcamper") {
+    return [
+      <Logo user={userID} email={formData.email} />,
+      <NavBar />,
+      <Library user={userID} />,
+    ];
   }
 
   return (
@@ -67,7 +70,7 @@ function App() {
           <LoginBox handleChange={handleChange} handleSubmit={handleSubmit} />
         }
       />
-      <Route path="/main" element={renderComponent()} />
+      <Route path="/main" element={<Main />} />
     </Routes>
   );
 }
