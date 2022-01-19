@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import Header from "../Header";
 
-const Logo = ({ user }) => {
+const Logo = ({ user, email }) => {
   return (
     <div className="topBanner">
       <div className="logoContainer">
@@ -13,8 +13,8 @@ const Logo = ({ user }) => {
         />
         <h2>School of Code Dashboard</h2>
       </div>
-      <div className="headerRight">
-        <Header user={user} />
+      <div>
+        <Header user={user} email={email}/>
       </div>
     </div>
   );
