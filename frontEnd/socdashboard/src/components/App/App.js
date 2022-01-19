@@ -4,6 +4,7 @@ import LoginBox from "../LoginBox";
 import Logo from "../Logo";
 import NavBar from "../NavBar";
 import { useState } from "react";
+import Library from "../Library";
 
 function App() {
   const [formData, setFormData] = useState({ email: "", bootcamperId: "" });
@@ -39,9 +40,9 @@ function App() {
       <LoginBox handleChange={handleChange} handleSubmit={handleSubmit} />
 
       {loggedIn && <NavBar />}
+      <Library />
     </div>
   );
-
 }
 
 export default App;

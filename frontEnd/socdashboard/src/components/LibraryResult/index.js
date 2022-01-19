@@ -1,21 +1,15 @@
-const LibraryResult = () => {
-      return (
-            <div className="libraryResultContainer">
-                  <h3>week 8</h3>
-                  <h4>Day 2</h4>
-                  <ul>
-                        <li>
-                              <a href="https://">Link</a>
-                        </li>
-                        <li>
-                              <a href="https://">Link</a>
-                        </li>
-                        <li>
-                              <a href="https://">Link</a>
-                        </li>
-                  </ul>
-            </div>
-      );
+const LibraryResult = ({ title, week, day, link }) => {
+  return (
+    <div className="libraryResultContainer">
+      <h1>{title}</h1>
+      <h3>
+        Week: {week} / Day: {day}
+      </h3>
+      <p>
+        <a href={link}></a>Resource
+      </p>
+    </div>
+  );
 };
 
 export default LibraryResult;
