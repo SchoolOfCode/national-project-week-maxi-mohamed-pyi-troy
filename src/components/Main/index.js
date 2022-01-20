@@ -1,8 +1,8 @@
 import Logo from "../Logo";
 import NavBar from "../NavBar";
-import { useState } from "react";
+// import { useState } from "react";
 import Library from "../Library";
-import Header from "../Header";
+// import Header from "../Header";
 import Buddies from "../Buddies";
 import "./main.css";
 

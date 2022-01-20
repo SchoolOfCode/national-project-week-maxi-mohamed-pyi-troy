@@ -1,17 +1,11 @@
-import {
-  Routes,
-  BrowserRouter,
-  Route,
-  Link,
-  useNavigate,
-} from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import LoginBox from "../LoginBox";
-import Logo from "../Logo";
-import NavBar from "../NavBar";
+// import Logo from "../Logo";
+// import NavBar from "../NavBar";
 import { useState } from "react";
-import Library from "../Library";
-import Header from "../Header";
+// import Library from "../Library";
+// import Header from "../Header";
 import Main from "../Main";
 
 function App() {
@@ -65,7 +59,12 @@ function App() {
         <Route
           path="/main"
           element={
-            <Main userID={userID} formData={formData} loggedIn={loggedIn} logOut={logOut}/>
+            <Main
+              userID={userID}
+              formData={formData}
+              loggedIn={loggedIn}
+              logOut={logOut}
+            />
           }
         />
       </Routes>
@@ -75,13 +74,3 @@ function App() {
 
 export default App;
 
-{
-  /* <div className="App">
-<Logo />
-<LoginBox handleChange={handleChange} handleSubmit={handleSubmit} />
-
-{loggedIn && <NavBar /> }
-{loggedIn && <Header user={userID}/>}
-<Library />
-</div> */
-}

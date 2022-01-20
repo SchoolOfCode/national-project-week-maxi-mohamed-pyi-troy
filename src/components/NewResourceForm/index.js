@@ -26,15 +26,15 @@ const NewResourceForm = () => {
 
   console.log(week);
 
-  async function onSubmitForm(event) {
-    event.preventDefault();
-    const body = { newPost };
-    const response = await fetch("http://localhost:4000/users/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newPost),
-    });
-  }
+  // async function onSubmitForm(event) {
+  //   event.preventDefault();
+  //   const body = { newPost };
+  //   const response = await fetch("http://localhost:4000/users/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(newPost),
+  //   });
+  // }
   return (
     <div className="submit-form">
       <form>
