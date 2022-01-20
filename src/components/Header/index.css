@@ -1,12 +1,14 @@
 .headerContainer {
   display: flex;
   margin-right: 1em;
+  align-items: center;
 }
 
-img {
+.bell {
   width: 2em;
   height: 2em;
   object-fit: contain;
+  margin-right: 1em;
 }
 
 h2.avatar {
