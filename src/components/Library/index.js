@@ -17,9 +17,7 @@ const Library = ({ user }) => {
       setPosts(data.payload);
     }
     getAllTasks();
-  }, []);
-
-  console.log(user);
+  }, [posts]);
 
   return (
     <div className="LibraryContainer">
@@ -31,6 +29,8 @@ const Library = ({ user }) => {
       {posts.map((item) => {
         return (
           <LibraryResult
+            setPosts={setPosts}
+            id={item.id}
             key={item.topic}
             title={item.topic}
             week={item.week}
