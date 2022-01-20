@@ -6,7 +6,8 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 
 const Library = ({ user }) => {
-  const [posts, setPosts] = useState([]);
+      const [posts, setPosts] = useState([]);
+
 
   useEffect(() => {
     async function getAllTasks() {
@@ -19,28 +20,33 @@ const Library = ({ user }) => {
     getAllTasks();
   }, [posts]);
 
-  return (
-    <div className="LibraryContainer">
-      <SearchBar />
+      return (
+            <div className="LibraryContainer">
+                  <SearchBar />
 
-      <div className="submit-results">
-        {user === "admin" && <NewResourceForm />}
-      </div>
-      {posts.map((item) => {
-        return (
-          <LibraryResult
-            setPosts={setPosts}
-            id={item.id}
-            key={item.topic}
-            title={item.topic}
-            week={item.week}
-            day={item.day}
-            link={item.link}
-          />
-        );
-      })}
-    </div>
+
+                  <div className="submit-results">
+                        {user === "admin" && (
+                              <NewResourceForm setPosts={setPosts} />
+                        )}
+                  </div>
+                  {posts.map((item) => {
+                        return (
+                              <LibraryResult
+                                setPosts={setPosts}
+                                id={item.id}
+                                key={item.topic}
+                                title={item.topic}
+                                week={item.week}
+                                day={item.day}
+                                link={item.link}
+                              />
+                        );
+                  })}
+            </div>
+
   );
+
 };
 
 export default Library;
