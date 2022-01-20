@@ -2,7 +2,8 @@ import React from "react";
 import "./index.css";
 import Header from "../Header";
 
-const Logo = ({ user, email }) => {
+const Logo = ({ user, email, loggedIn, logOut }) => {
+  console.log(loggedIn);
   return (
     <div className="topBanner">
       <div className="logoContainer">
@@ -11,11 +12,13 @@ const Logo = ({ user, email }) => {
           alt="logo"
           className="socLogo"
         />
-        <h2>School of Code Dashboard</h2>
+        <h2 className="header-name">School of Code Dashboard</h2>
       </div>
-      <div>
-        <Header user={user} email={email}/>
-      </div>
+      {loggedIn ? (
+        <div>
+          <Header user={user} email={email} logOut={logOut} />
+        </div>
+      ) : null}
     </div>
   );
 };

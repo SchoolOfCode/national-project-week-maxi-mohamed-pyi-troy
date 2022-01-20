@@ -1,22 +1,9 @@
 * {
       margin: 0;
       padding: 0;
-}
-
-.main-content {
-      background-color: red;
+    }
+    
+    .main-library {
       display: flex;
       flex-direction: row;
-}
-.libraryComponent {
-      display: flex;
-}
-
-.main-div {
-      background-color: red;
-}
-
-.main-library {
-      display: flex;
-      flex-direction: row;
-}
+    }

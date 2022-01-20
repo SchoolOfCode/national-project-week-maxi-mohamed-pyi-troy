@@ -1,12 +1,9 @@
 import React from "react";
 import "./index.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-const Header = ({ user, email }) => {
+const Header = ({ user, email, logOut }) => {
   const [dropdown, setDropdown] = useState(false);
-
-  let navigate = useNavigate();
 
   function handleDropdown() {
     setDropdown((prevState) => !prevState);
@@ -20,10 +17,10 @@ const Header = ({ user, email }) => {
       ></img>
       <h2 className="avatar">{email[0].toUpperCase()}</h2>
 
-      <h2 onClick={handleDropdown}>
+      <h2 className="welcome-message" onClick={handleDropdown}>
         Welcome {user} <span>v</span>
       </h2>
-      {dropdown && <button onClick={() => navigate("/")}>Logout</button>}
+      {dropdown && <button onClick={() => logOut()}>Logout</button>}
     </div>
   );
 };

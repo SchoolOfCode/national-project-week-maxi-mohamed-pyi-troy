@@ -1,5 +1,5 @@
 h2 {
-  margin-left: 2em;
+  color: white;
 }
 
 .logoContainer {
@@ -10,15 +10,19 @@ h2 {
 .socLogo {
   margin-top: 0.5em;
   margin-left: 2.4em;
+  margin-bottom: 0.3em;
   height: 5em;
   width: 5em;
-  border-radius: 50%;
   position: relative;
+}
+
+.header-name {
+  margin-left: 1.9em;
 }
 
 .topBanner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: beige;
+  background-color: #03045e;
 }

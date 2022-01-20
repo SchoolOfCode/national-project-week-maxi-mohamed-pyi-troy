@@ -1,0 +1,20 @@
+.submit-form {
+  margin-top: 2%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-left: 1em;
+}
+
+.submit-form input {
+  padding: 3px;
+}
+
+.submit-button {
+  padding: 3px;
+  margin-left: 1em;
+  border-radius: 9px;
+}
