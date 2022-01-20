@@ -1,5 +1,7 @@
 import NavBar from "../NavBar";
 import Logo from "../Logo";
+import Meetings from "../Meetings";
+import "./index.css";
 
 const Buddies = ({ userID, formData, loggedIn, logOut }) => {
   return (
@@ -10,8 +12,10 @@ const Buddies = ({ userID, formData, loggedIn, logOut }) => {
         loggedIn={loggedIn}
         logOut={logOut}
       />
-      <NavBar />
-      <h1>Buddies</h1>
+      <div className="main-buddy">
+        <NavBar />
+        <Meetings/>
+      </div>
     </div>
   );
 };

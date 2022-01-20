@@ -3,6 +3,7 @@ import SearchBar from "../SearchBar";
 import NewResourceForm from "../NewResourceForm";
 import React, { useState, useEffect } from "react";
 import "./index.css";
+
 const Library = ({ user }) => {
   const [fetchPosts, setFetchPosts] = useState(true);
   const [posts, setPosts] = useState([]);
@@ -37,6 +38,7 @@ const Library = ({ user }) => {
             day={item.day}
             link={item.link}
             id={item.id}
+            user={user}
           />
         );
       })}
