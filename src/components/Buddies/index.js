@@ -14,7 +14,9 @@ const Buddies = ({ userID, formData, loggedIn, logOut }) => {
       />
       <div className="main-buddy">
         <NavBar />
-        <Meetings/>
+        <div className="meetings-container">
+          <Meetings />
+        </div>
       </div>
     </div>
   );

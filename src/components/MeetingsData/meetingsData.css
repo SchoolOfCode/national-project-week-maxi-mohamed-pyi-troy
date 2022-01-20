@@ -1,0 +1,4 @@
+.libraryResultContainer {
+  display: flex;
+  flex-direction: row;
+}

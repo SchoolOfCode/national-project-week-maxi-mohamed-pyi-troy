@@ -2,7 +2,32 @@ import MeetingsData from "../MeetingsData";
 import { useState } from "react";
 
 const Meetings = () => {
-  const [meeting, setMeeting] = useState([]);
+  const [meeting, setMeeting] = useState([
+    {
+      bootcamper: "Max",
+      topic: "Javascript",
+      dataTime: "2021-12-16T22:20",
+      link: "https://www.google.com/",
+    },
+    {
+      bootcamper: "Max",
+      topic: "Javascript",
+      dataTime: "2021-12-16T22:20",
+      link: "https://www.google.com/",
+    },
+    {
+      bootcamper: "Max",
+      topic: "Javascript",
+      dataTime: "2021-12-16T22:20",
+      link: "https://www.google.com/",
+    },
+    {
+      bootcamper: "Max",
+      topic: "Javascript",
+      dataTime: "2021-12-16T22:20",
+      link: "https://www.google.com/",
+    },
+  ]);
   const [bootcamper, setBootcamper] = useState("");
   const [dateTime, setDateTime] = useState("");
   const [topic, setTopic] = useState("");
@@ -31,7 +56,7 @@ const Meetings = () => {
   console.log(meeting);
 
   return (
-    <div className="submit-form">
+    <div className="meeting-form">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -59,19 +84,21 @@ const Meetings = () => {
         />
         <button className="submit-button">Submit</button>
       </form>
-      {meeting.map((meet, index) => {
-        return (
-          <div>
-            <MeetingsData
-              key={index}
-              dateTime={meet.dateTime}
-              bootcamper={meet.bootcamper}
-              topic={meet.topic}
-              link={meet.link}
-            />
-          </div>
-        );
-      })}
+      <div className="test">
+        {meeting.map((meet, index) => {
+          return (
+            <div>
+              <MeetingsData
+                key={index}
+                dateTime={meet.dateTime}
+                bootcamper={meet.bootcamper}
+                topic={meet.topic}
+                link={meet.link}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
