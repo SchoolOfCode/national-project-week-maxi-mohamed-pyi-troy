@@ -1,5 +1,5 @@
 import "./index.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 //https://schoolofcodelibrary.herokuapp.com/users/{id}
 const LibraryResult = ({ title, week, day, link, id, setFetchPosts }) => {
       async function removeItem() {
