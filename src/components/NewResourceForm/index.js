@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import { useState, useEffect } from "react";
 
-const NewResourceForm = () => {
+const NewResourceForm = (setPosts) => {
       const [week, setWeek] = useState(0);
       const [day, setDay] = useState(0);
       const [topic, setTopic] = useState("");
@@ -36,6 +36,7 @@ const NewResourceForm = () => {
                   }
             );
             const data = await response.json();
+            event.target.reset();
             return data;
       }
       return (
@@ -61,7 +62,9 @@ const NewResourceForm = () => {
                               placeholder="Link"
                               onChange={(event) => getLink(event.target.value)}
                         />
-                        <button className="submit-button">Submit</button>
+                        <button onClick={setPosts} className="submit-button">
+                              Submit
+                        </button>
                   </form>
             </div>
       );
