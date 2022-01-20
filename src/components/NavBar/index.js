@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
+
     <nav>
       <ul className="listContainer">
         <div className="nav-logos">

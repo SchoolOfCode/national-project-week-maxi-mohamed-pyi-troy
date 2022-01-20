@@ -1,9 +1,17 @@
-import React from "react";
+import NavBar from "../NavBar";
+import Logo from "../Logo";
 
-const Buddies = () => {
+const Buddies = ({ userID, formData, loggedIn, logOut }) => {
   return (
     <div>
-      <h1>Study Buddies</h1>
+      <Logo
+        user={userID}
+        email={formData.email}
+        loggedIn={loggedIn}
+        logOut={logOut}
+      />
+      <NavBar />
+      <h1>Buddies</h1>
     </div>
   );
 };

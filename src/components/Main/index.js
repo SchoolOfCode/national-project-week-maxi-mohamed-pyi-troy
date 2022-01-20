@@ -3,7 +3,6 @@ import NavBar from "../NavBar";
 // import { useState } from "react";
 import Library from "../Library";
 // import Header from "../Header";
-import Buddies from "../Buddies";
 import "./main.css";
 
 const Main = ({ userID, formData, loggedIn, logOut }) => {
@@ -18,7 +17,6 @@ const Main = ({ userID, formData, loggedIn, logOut }) => {
       <div className="main-library">
         <NavBar />
         <Library user={userID} className="libraryComponent" />
-        {/* <Buddies /> */}
       </div>
     </div>
   );
