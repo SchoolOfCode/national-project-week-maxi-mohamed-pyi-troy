@@ -18,7 +18,7 @@ const Main = ({ userID, formData, loggedIn, logOut }) => {
       <div className="main-library">
         <NavBar />
         <Library user={userID} className="libraryComponent" />
-        <Buddies />
+        {/* <Buddies /> */}
       </div>
     </div>
   );

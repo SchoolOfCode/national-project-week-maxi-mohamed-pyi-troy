@@ -1,17 +1,12 @@
 .main-content {
-      background-color: red;
-      display: flex;
-      flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .libraryComponent {
-      display: flex;
-}
-
-.main-div {
-      background-color: red;
+  display: flex;
 }
 
 .main-library {
-      display: flex;
-      flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
