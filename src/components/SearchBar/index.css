@@ -1,0 +1,17 @@
+.searchBarContainer {
+  height: 2em;
+  width: auto;
+  margin-left: 1em;
+}
+
+.searchBarContainer input {
+  margin-top: 1em;
+  margin-right: 1em;
+  padding: 3px;
+}
+
+.searchBarContainer button {
+  padding: 3px;
+  margin-left: 1em;
+  border-radius: 9px;
+}

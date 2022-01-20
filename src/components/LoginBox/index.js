@@ -9,7 +9,7 @@ export default function LoginBox({
 }) {
   return (
     <>
-     <div className="logoContainer">
+      <div className="logoContainer">
         <img
           src="https://www.schoolofcode.co.uk/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
           alt="logo"
@@ -17,27 +17,31 @@ export default function LoginBox({
         />
         <h2>School of Code Dashboard</h2>
       </div>
-    <div className="inputContainer">
-      <h1>Welcome Bootcamper</h1>
-      <h2>Please login with your email and bootcamper I.D</h2>
-      <form className="inputForm" onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          className="emailInput"
-          onChange={handleChange}
-          required
-        ></input>
-        <input
-          type="text"
-          name="bootcamperId"
-          className="idInput"
-          onChange={handleChange}
-          required
-        ></input>
-        <button className="loginSubmitButton">Login Now</button>
-      </form>
-    </div>
+      <div className="inputContainer">
+        <h1 className="login-title">Welcome Bootcamper</h1>
+        <h2 className="login-subtitle">
+          Please login with your email and bootcamper I.D
+        </h2>
+        <form className="inputForm" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            className="emailInput"
+            onChange={handleChange}
+            required
+            placeholder="Email"
+          ></input>
+          <input
+            type="text"
+            name="bootcamperId"
+            className="idInput"
+            onChange={handleChange}
+            required
+            placeholder="Bootcamper || Admin"
+          ></input>
+          <button className="loginSubmitButton">Login Now</button>
+        </form>
+      </div>
     </>
   );
 }

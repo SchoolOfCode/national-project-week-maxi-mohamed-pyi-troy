@@ -12,6 +12,7 @@ const Header = ({ user, email, logOut }) => {
   return (
     <div className="headerContainer">
       <img
+        className="bell"
         src="https://media-public.canva.com/xni2M/MADd2Bxni2M/2/t.png"
         alt="bell"
       ></img>
