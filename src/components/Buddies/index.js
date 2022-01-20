@@ -9,3 +9,4 @@ const Buddies = () => {
 };
 
 export default Buddies;
+//comment
