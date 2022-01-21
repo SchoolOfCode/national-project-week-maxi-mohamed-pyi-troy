@@ -6,6 +6,13 @@ import "./index.css";
 const Library = ({ user }) => {
   const [fetchPosts, setFetchPosts] = useState(true);
   const [posts, setPosts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  function onChange(e) {
+    setSearchTerm(e.target.value);
+    console.log(searchTerm);
+  }
+
   useEffect(() => {
     console.log("Lib");
     async function getAllTasks() {
@@ -23,23 +30,30 @@ const Library = ({ user }) => {
   }, [fetchPosts]);
   return (
     <div className="LibraryContainer">
-      <SearchBar />
+      <h2 className="library-title">Bootcamper Library</h2>
+      <SearchBar onChange={onChange} />
       <div className="submit-results">
         {user === "admin" && <NewResourceForm setFetchPosts={setFetchPosts} />}
       </div>
-      {posts.map((item) => {
-        return (
-          <LibraryResult
-            setFetchPosts={setFetchPosts}
-            key={item.id}
-            title={item.topic}
-            week={item.week}
-            day={item.day}
-            link={item.link}
-            id={item.id}
-          />
-        );
-      })}
+      {posts
+        .filter(function (item) {
+          if (searchTerm === "") {
+            return item;
+          } else return item.topic.toLowerCase().includes(searchTerm.toLocaleLowerCase());
+        })
+        .map((item) => {
+          return (
+            <LibraryResult
+              setFetchPosts={setFetchPosts}
+              key={item.id}
+              title={item.topic}
+              week={item.week}
+              day={item.day}
+              link={item.link}
+              id={item.id}
+            />
+          );
+        })}
     </div>
   );
 };

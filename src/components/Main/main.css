@@ -1,11 +1,3 @@
-.main-content {
-  display: flex;
-  flex-direction: row;
-}
-.libraryComponent {
-  display: flex;
-}
-
 .main-library {
   display: flex;
   flex-direction: row;

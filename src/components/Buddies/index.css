@@ -1,10 +1,11 @@
-.submit-results {
+.main-buddy {
+  display: flex;
+  flex-direction: row;
+}
+
+.meetings-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-}
-
-.library-title{
-  color: black;
 }
