@@ -1,8 +1,9 @@
 import React from "react";
+import "./meetingsData.css";
 
 const MeetingsData = ({ datetime, bootcamper, topic, link }) => {
   return (
-    <div className="libraryResultContainer">
+    <div className="meeting-results-container">
       <h3>Date and Time : {datetime}</h3>
       <h3>Bootcamper : {bootcamper}</h3>
       <h3>Topic : {topic}</h3>

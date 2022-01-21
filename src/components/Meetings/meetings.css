@@ -1,13 +1,28 @@
 .test {
+  margin-left: 1em;
   display: flex;
   flex-direction: column;
-}
-.meeting-form {
-  display: flex;
-  flex-direction: column;
+  height: 30em;
+  justify-content: space-around;
 }
 
-h2.meeting-title{
-  color: maroon;
-  border: 1px solid;
+h2.meeting-title {
+  color: black;
+  margin-left: 0.6em;
+}
+
+.meeting-form-container {
+  margin-left: 1em;
+}
+
+.meeting-form-input-bootcamper {
+  padding: 2px;
+}
+
+.meeting-form-input-topic {
+  padding: 2px;
+}
+
+.meeting-form-input-zoom {
+  padding: 2px;
 }

@@ -30,7 +30,8 @@ const Library = ({ user }) => {
   }, [fetchPosts]);
   return (
     <div className="LibraryContainer">
-      <SearchBar onChange={onChange}/>
+      <h2 className="library-title">Bootcamper Library</h2>
+      <SearchBar onChange={onChange} />
       <div className="submit-results">
         {user === "admin" && <NewResourceForm setFetchPosts={setFetchPosts} />}
       </div>
@@ -38,9 +39,7 @@ const Library = ({ user }) => {
         .filter(function (item) {
           if (searchTerm === "") {
             return item;
-          } else return (
-            item.topic.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-          ) 
+          } else return item.topic.toLowerCase().includes(searchTerm.toLocaleLowerCase());
         })
         .map((item) => {
           return (

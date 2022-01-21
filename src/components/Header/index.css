@@ -4,12 +4,12 @@
   align-items: center;
 }
 
-.bell {
+/* .bell {
   width: 2em;
   height: 2em;
   object-fit: contain;
   margin-right: 1em;
-}
+} */
 
 h2.avatar {
   margin-right: 0.5em;

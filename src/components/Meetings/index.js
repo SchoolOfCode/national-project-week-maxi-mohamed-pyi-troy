@@ -1,5 +1,6 @@
 import MeetingsData from "../MeetingsData";
 import { useState, useEffect } from "react";
+import "./meetings.css";
 
 const Meetings = () => {
   const [meeting, setMeeting] = useState([]);
@@ -62,30 +63,34 @@ const Meetings = () => {
   console.log(meeting);
 
   return (
-    <div className="meeting-form">
+    <div>
       <div>
         <h2 className="meeting-title">Meetings</h2>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="meeting-form-container">
         <input
+          className="meeting-form-input-bootcamper"
           type="text"
           name="bootcamper"
           placeholder="Bootcamper"
           onChange={getBootcamper}
         />
         <input
+        className="meeting-form-input"
           type="datetime-local"
           name="datetime"
           placeholder="Date & Time"
           onChange={getDateTime}
         />
         <input
+          className="meeting-form-input-topic"
           type="text"
           name="name"
           placeholder="Topic"
           onChange={getTopic}
         />
         <input
+          className="meeting-form-input-zoom"
           type="url"
           name="link"
           placeholder="Zoom Link"

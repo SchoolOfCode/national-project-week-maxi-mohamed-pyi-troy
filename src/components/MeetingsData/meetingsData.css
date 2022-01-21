@@ -1,4 +1,10 @@
-.libraryResultContainer {
+.meeting-results-container {
+  border: solid 1px;
+  border-radius: 5px;
+  width: 90%;
+  height: 6em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  padding: 0.2em;
 }
+
