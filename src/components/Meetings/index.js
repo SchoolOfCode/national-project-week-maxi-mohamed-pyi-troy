@@ -1,35 +1,12 @@
 import MeetingsData from "../MeetingsData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Meetings = () => {
-  const [meeting, setMeeting] = useState([
-    {
-      bootcamper: "Max",
-      topic: "Javascript",
-      dataTime: "2022-01-23T22:40",
-      link: "https://www.google.com/",
-    },
-    {
-      bootcamper: "Max",
-      topic: "Javascript",
-      dataTime: "2021-12-16T22:20",
-      link: "https://www.google.com/",
-    },
-    {
-      bootcamper: "Max",
-      topic: "Javascript",
-      dataTime: "2021-12-16T22:20",
-      link: "https://www.google.com/",
-    },
-    {
-      bootcamper: "Max",
-      topic: "Javascript",
-      dataTime: "2021-12-16T22:20",
-      link: "https://www.google.com/",
-    },
-  ]);
+  const [meeting, setMeeting] = useState([]);
+
+  const [fetchMeetings, setFetchMeetings] = useState(true);
   const [bootcamper, setBootcamper] = useState("");
-  const [dateTime, setDateTime] = useState("");
+  const [datetime, setDateTime] = useState("");
   const [topic, setTopic] = useState("");
   const [link, setLink] = useState("");
 
@@ -46,13 +23,42 @@ const Meetings = () => {
     setLink(e.target.value);
   }
 
-  function handleSubmit(e) {
+  //POST A NEW MEETING
+  async function handleSubmit(e) {
+    // console.log(datetime);
     e.preventDefault();
-    setMeeting((prevState) => {
-      return [...prevState, { bootcamper, dateTime, link, topic }];
+    const body = {
+      datetime: datetime,
+      name: bootcamper,
+      link: link,
+      topic: topic,
+    };
+    const response = await fetch("https://backendproj.herokuapp.com/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
     });
+    const data = await response.json();
     e.target.reset();
+    setFetchMeetings(true);
+    return data;
   }
+
+  // GET ALL MEETINGS
+  useEffect(() => {
+    console.log("Meeting");
+    async function getAllMeetings() {
+      const response = await fetch("https://backendproj.herokuapp.com/users");
+      const data = await response.json();
+      setMeeting(data.payload);
+      setFetchMeetings(false);
+      console.log(data.payload);
+    }
+    if (fetchMeetings) {
+      getAllMeetings();
+    }
+  }, [fetchMeetings]);
+
   console.log(meeting);
 
   return (
@@ -69,7 +75,7 @@ const Meetings = () => {
         />
         <input
           type="datetime-local"
-          name="dateTime"
+          name="datetime"
           placeholder="Date & Time"
           onChange={getDateTime}
         />
@@ -88,13 +94,13 @@ const Meetings = () => {
         <button className="submit-button">Submit</button>
       </form>
       <div className="test">
-        {meeting.map((meet, index) => {
+        {meeting.map((meet) => {
           return (
             <div>
               <MeetingsData
-                key={index}
-                dateTime={meet.dateTime}
-                bootcamper={meet.bootcamper}
+                key={meet.id}
+                datetime={meet.datetime}
+                bootcamper={meet.name}
                 topic={meet.topic}
                 link={meet.link}
               />
@@ -107,3 +113,31 @@ const Meetings = () => {
 };
 
 export default Meetings;
+
+// setMeeting((prevState) => {
+//   return [...prevState, { bootcamper, dateTime, link, topic }];
+// });
+// {
+//   bootcamper: "Max",
+//   topic: "Javascript",
+//   dataTime: "2022-01-23T22:40",
+//   link: "https://www.google.com/",
+// },
+// {
+//   bootcamper: "Max",
+//   topic: "Javascript",
+//   dataTime: "2021-12-16T22:20",
+//   link: "https://www.google.com/",
+// },
+// {
+//   bootcamper: "Max",
+//   topic: "Javascript",
+//   dataTime: "2021-12-16T22:20",
+//   link: "https://www.google.com/",
+// },
+// {
+//   bootcamper: "Max",
+//   topic: "Javascript",
+//   dataTime: "2021-12-16T22:20",
+//   link: "https://www.google.com/",
+// },

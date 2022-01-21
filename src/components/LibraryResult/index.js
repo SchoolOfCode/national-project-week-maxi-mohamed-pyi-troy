@@ -17,15 +17,9 @@ const LibraryResult = ({ title, week, day, link, id, setFetchPosts, user }) => {
   function combo() {
     removeItem();
   }
-  //   useEffect(() => {
-  //     // DELETE request using fetch with async/await
-  //     async function removeItem() {
-  //       await fetch(`https://schoolofcodelibrary.herokuapp.com/users/${id}`, {
-  //         method: "DELETE",
-  //       });
-  //     }
-  //     removeItem();
-  //   }, []);
+
+  console.log("user-", user);
+
   return (
     <div className="libraryResultContainer">
       <a href={link} target="_blank" rel="noreferrer">
@@ -40,7 +34,3 @@ const LibraryResult = ({ title, week, day, link, id, setFetchPosts, user }) => {
   );
 };
 export default LibraryResult;
-//Call api patch
-//Call api delete ---> id
-//Find ID
-//Call api delete method with that id

@@ -1,11 +1,10 @@
 import LibraryResult from "../LibraryResult";
 import SearchBar from "../SearchBar";
 import NewResourceForm from "../NewResourceForm";
-
 import React, { useState, useEffect } from "react";
 import "./index.css";
-
 const Library = ({ user }) => {
+  const [fetchPosts, setFetchPosts] = useState(true);
   const [posts, setPosts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -15,47 +14,48 @@ const Library = ({ user }) => {
   }
 
   useEffect(() => {
+    console.log("Lib");
     async function getAllTasks() {
       const response = await fetch(
         "https://schoolofcodelibrary.herokuapp.com/users/"
       );
       const data = await response.json();
       setPosts(data.payload);
+      setFetchPosts(false);
+      console.log(data.payload);
     }
-    getAllTasks();
-  }, [posts]);
+    if (fetchPosts) {
+      getAllTasks();
+    }
+  }, [fetchPosts]);
   return (
     <div className="LibraryContainer">
-      <SearchBar onChange={onChange} />
-
+      <SearchBar onChange={onChange}/>
       <div className="submit-results">
-        {user === "admin" && <NewResourceForm setPosts={setPosts} />}
+        {user === "admin" && <NewResourceForm setFetchPosts={setFetchPosts} />}
       </div>
       {posts
-        .filter((item) => {
+        .filter(function (item) {
           if (searchTerm === "") {
             return item;
-          } else if (
+          } else return (
             item.topic.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-          ) {
-            return item;
-          }
+          ) 
         })
         .map((item) => {
           return (
             <LibraryResult
-              setPosts={setPosts}
-              id={item.id}
-              key={item.topic}
+              setFetchPosts={setFetchPosts}
+              key={item.id}
               title={item.topic}
               week={item.week}
               day={item.day}
               link={item.link}
+              id={item.id}
             />
           );
         })}
     </div>
   );
 };
-
 export default Library;

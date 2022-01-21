@@ -1,9 +1,9 @@
 import React from "react";
 
-const MeetingsData = ({ dateTime, bootcamper, topic, link }) => {
+const MeetingsData = ({ datetime, bootcamper, topic, link }) => {
   return (
     <div className="libraryResultContainer">
-      <h3>Date and Time : {dateTime}</h3>
+      <h3>Date and Time : {datetime}</h3>
       <h3>Bootcamper : {bootcamper}</h3>
       <h3>Topic : {topic}</h3>
       <h4>
