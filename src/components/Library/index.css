@@ -5,6 +5,7 @@
   align-items: flex-start;
 }
 
-.library-title{
+.library-title {
   color: black;
+  margin-left: 0.6em;
 }
