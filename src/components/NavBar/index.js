@@ -22,7 +22,7 @@ const NavBar = () => {
                 src="https://media-public.canva.com/8wuZ4/MAESjo8wuZ4/1/t.png"
                 alt="studyBuddyLogo"
               ></img>
-              <p>Study Buddeis</p>
+              <p>Study Buddies</p>
             </li>
           </Link>
         </div>
