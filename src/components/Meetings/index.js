@@ -6,7 +6,7 @@ const Meetings = () => {
     {
       bootcamper: "Max",
       topic: "Javascript",
-      dataTime: "2021-12-16T22:20",
+      dataTime: "2022-01-23T22:40",
       link: "https://www.google.com/",
     },
     {
@@ -57,6 +57,9 @@ const Meetings = () => {
 
   return (
     <div className="meeting-form">
+      <div>
+        <h2 className="meeting-title">Meetings</h2>
+      </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

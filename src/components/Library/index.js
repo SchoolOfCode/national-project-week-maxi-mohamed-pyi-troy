@@ -33,7 +33,7 @@ const Library = ({ user }) => {
       </div>
       {posts
         .filter((item) => {
-          if (searchTerm == "") {
+          if (searchTerm === "") {
             return item;
           } else if (
             item.topic.toLowerCase().includes(searchTerm.toLocaleLowerCase())
