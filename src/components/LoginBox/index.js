@@ -37,7 +37,7 @@ export default function LoginBox({
             className="idInput"
             onChange={handleChange}
             required
-            placeholder="Bootcamper || Admin"
+            placeholder="bootcamper || admin"
           ></input>
           <button className="loginSubmitButton">Login Now</button>
         </form>

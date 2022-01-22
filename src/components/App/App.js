@@ -20,7 +20,7 @@ function App() {
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [event.target.name]: event.target.value,
+        [event.target.name]: event.target.value.toLowerCase(),
       };
     });
   }
